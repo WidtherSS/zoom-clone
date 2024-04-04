@@ -9,7 +9,7 @@ import {
 } from "@stream-io/video-react-sdk";
 import { Button } from "./ui/button";
 
-const MeetingSetup = () => {
+const MeetingSetup = ({setIsSetupComplete} : {setIsSetupComplete: (value: boolean) => void}) => {
   const call = useCall();
   const [isMicCamToggled, setIsMicCamToggled] = useState(false);
 
@@ -41,6 +41,7 @@ const MeetingSetup = () => {
         </div>
         <Button className="rounded-md bg-green-500 px-4 py-2.5" onClick={() => {
           call.join()
+          setIsSetupComplete(true)
         }}>
           Join meeting
         </Button>

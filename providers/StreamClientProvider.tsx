@@ -3,7 +3,8 @@
 import { tokenProvider } from "@/actions/stream.action";
 import Loader from "@/components/Loader";
 import { useUser } from "@clerk/nextjs";
-import { StreamVideoClient, StreamVideo } from "@stream-io/video-react-sdk";
+import { StreamVideoClient,
+   StreamVideo } from "@stream-io/video-react-sdk";
 import { ReactNode, useEffect, useState } from "react";
 
 const apiKey = process.env.NEXT_PUBLIC_STREAM_API_KEY;
